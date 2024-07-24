@@ -22,6 +22,7 @@
 
 import cardRepository from "~/repository/cardRepository.js";
 import {reactive} from "vue";
+import {usePage2} from "~/composition/page2.js";
 
 let currentPage = ref(1);
 let pageSize = ref(10);
@@ -38,7 +39,13 @@ const pageQuery = computed(() => {
   }
 })
 
+//api.js中定义
 const {$api} = useNuxtApp();
+usePage2({
+  $api, cardRepository,
+})
+
+
 let api = cardRepository($api);
 let {data, status} = await useAsyncData(() => api.page(pageQuery.value))
 if (status.value == 'success') {

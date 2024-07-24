@@ -1,3 +1,4 @@
+// 确定baseURL及拦截器
 export default defineNuxtPlugin({
     setup() {
         const api = $fetch.create({

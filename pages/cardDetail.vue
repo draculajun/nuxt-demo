@@ -27,8 +27,10 @@ let {data, status} = await useAsyncData(`cardDetail:${relationId},${shopId}`,
     () => cardApi.getUserCardPackageRcardInfo({relationId, shopId}),
     );
 if (status.value == 'success') {
-  CardName.value = data.value.data.Data.CardInfo.CardName;
-  CardSn.value = data.value.data.Data.CardInfo.CardSn;
+  if(!data.value.error) {
+    CardName.value = data.value.data.Data.CardInfo.CardName;
+    CardSn.value = data.value.data.Data.CardInfo.CardSn;
+  }
 }
 
 </script>

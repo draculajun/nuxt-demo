@@ -1,7 +1,7 @@
 <script setup lang="ts">
 let aboutStr = ref('about');
 onMounted(() => {
-  debugger
+
 });
 
 // definePageMeta({

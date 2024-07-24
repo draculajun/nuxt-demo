@@ -5,7 +5,6 @@ export default defineNuxtPlugin({
             baseURL: useRuntimeConfig().public.baseURL,
             onRequest({request, options, error}) {
                 console.log(options.body)
-                debugger
                 options.body = jsonToFormData(options.body);
                 // if (session.value?.token) {
                 const headers = options.headers ||= {}

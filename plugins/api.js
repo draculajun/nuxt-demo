@@ -1,18 +1,9 @@
-const jsonToFormData = (json) => {
-    const formData = new FormData();
-    for (let key in json) {
-        formData.append(key, json[key]);
-    }
-    return formData;
-}
-
 export default defineNuxtPlugin({
     setup() {
         const api = $fetch.create({
             baseURL: useRuntimeConfig().public.baseURL,
             onRequest({request, options, error}) {
                 console.log(options.body)
-                debugger
                 options.body = jsonToFormData(options.body);
                 // if (session.value?.token) {
                 const headers = options.headers ||= {}
@@ -30,7 +21,6 @@ export default defineNuxtPlugin({
                 // }
             },
             async onResponseError({response}) {
-                debugger
                 // if (response.status === 401) {
                 //     await nuxtApp.runWithContext(() => navigateTo('/login'))
                 // }

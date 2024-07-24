@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nuxt dev",
-    "build": "nuxt build",
+    "serve": "nuxt dev --dotenv .env.dev",
+    "build": "nuxt build --dotenv .env.prod",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -14,6 +14,7 @@
     "nuxt": "^3.12.4",
     "pinia": "^2.1.7",
     "pinia-plugin-persist": "^1.0.0",
+    "qs": "^6.12.3",
     "vue": "latest"
   },
   "devDependencies": {

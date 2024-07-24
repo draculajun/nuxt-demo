@@ -1,10 +1,12 @@
+/**
+* 王文俊
+* 2024年07月23日
+*/
 <template>
-  <NuxtLayout>
-    <NuxtPage/>
-  </NuxtLayout>
+  <h1>AppFooter</h1>
 </template>
 
-<script setup lang="ts">
+<script setup>
 
 </script>
 

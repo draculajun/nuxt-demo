@@ -2,14 +2,14 @@
 // @ts-ignore
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
-    devtools: {enabled: true},
+    devtools: { enabled: true },
 
     runtimeConfig: {
         // The private keys which are only available server-side
         apiSecret: 'apiSecret',
         // Keys within public are also exposed client-side
         public: {
-            apiBase: '/apiBase'
+            baseURL: process.env.NUXT_DIGITALMALL_API,
         }
     },
 

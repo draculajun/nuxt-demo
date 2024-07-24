@@ -11,9 +11,14 @@ export default defineNuxtPlugin({
         const api = $fetch.create({
             baseURL: useRuntimeConfig().public.baseURL,
             onRequest({request, options, error}) {
+                console.log(options.body)
+                debugger
                 options.body = jsonToFormData(options.body);
                 // if (session.value?.token) {
-                // const headers = options.headers ||= {}
+                const headers = options.headers ||= {}
+                headers.channel = `11`
+                headers.cid = `10992`
+                headers.utoken = `Y3FnYWQ3NThoY2hhbW1icnZ1dTAxNzIxODA0NDQ0NTI5MTA5MDA3`
                 // if (Array.isArray(headers)) {
                 //     headers.push(['Authorization', `Bearer ${session.value?.token}`])
                 // } else if (headers instanceof Headers) {
@@ -25,6 +30,7 @@ export default defineNuxtPlugin({
                 // }
             },
             async onResponseError({response}) {
+                debugger
                 // if (response.status === 401) {
                 //     await nuxtApp.runWithContext(() => navigateTo('/login'))
                 // }

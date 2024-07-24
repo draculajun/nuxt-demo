@@ -12,6 +12,9 @@
       <NuxtLink to="/login">login</NuxtLink>
     </li>
     <li>
+      <NuxtLink to="/cardList">cardList</NuxtLink>
+    </li>
+    <li>
       <NuxtLink to="/about">about</NuxtLink>
     </li>
     <li>

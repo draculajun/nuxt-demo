@@ -3,7 +3,7 @@ import {navigateTo} from "#app";
 
 export default defineNuxtRouteMiddleware((to, from) => {
     let token = null;
-    let passUrl = ['/', '/login', '/index', '/about'];
+    let passUrl = ['/', '/login', '/index', '/about', '/cardList'];
     if (!passUrl.includes(to.path)) {
         if (import.meta.client) {
             token = localStorage.getItem('token');

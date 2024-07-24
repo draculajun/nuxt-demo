@@ -54,8 +54,8 @@ const pageChangeHandler = (page) => {
   currentPage.value = page;
 }
 
-watch(() => pageQuery, async (newVal) => {
-   await api.page(newVal.value).then(res => {
+watch(() => pageQuery,  (newVal) => {
+    api.page(newVal.value).then(res => {
       pageInfo.tableData = res.data.Data.Lists;
       pageInfo.total = res.data.Data.TotalNum;
     })

@@ -5,6 +5,13 @@ const cardRepository = (fetch) => ({
             body,
         })
     },
+
+    getUserCardPackageRcardInfo: function (body) {
+        return fetch('/v1/order/card/getUserCardPackageRcardInfo', {
+            method: 'POST',
+            body,
+        })
+    },
 })
 
 export default cardRepository;

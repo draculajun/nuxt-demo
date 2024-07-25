@@ -6,6 +6,10 @@
   <h1>AppHeader</h1>
   <ul class="header">
     <li>
+      <NuxtLink to="/t1">t1</NuxtLink>
+    </li><li>
+      <NuxtLink to="/t2">t2</NuxtLink>
+    </li><li>
       <NuxtLink to="/">index</NuxtLink>
     </li>
     <li>

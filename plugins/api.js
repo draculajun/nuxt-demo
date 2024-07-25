@@ -4,7 +4,6 @@ export default defineNuxtPlugin({
         const api = $fetch.create({
             baseURL: useRuntimeConfig().public.baseURL,
             onRequest({request, options, error}) {
-                console.log(options.body)
                 options.body = jsonToFormData(options.body);
                 // if (session.value?.token) {
                 const headers = options.headers ||= {}

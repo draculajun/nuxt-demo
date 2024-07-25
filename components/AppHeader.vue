@@ -22,27 +22,10 @@
     </li>
   </ul>
 
-  <!-- <div>
-    <p>Current route: {{ route.path }}</p>
-    <el-button @click="openLogin">openLogin</el-button>
-    <el-button @click="openAbout">openAbout</el-button>
-  </div>-->
 </template>
 
 <script setup>
 
-const runtimeConfig = useRuntimeConfig();
-// console.log(runtimeConfig);
-
-// 命令式导航
-// const openLogin = () => {
-//   // const router = useRouter();
-//   // router.push('/login');
-//   navigateTo('/login');
-// }
-//
-// const openAbout = () => {
-//   navigateTo('/about');
 // }
 </script>
 

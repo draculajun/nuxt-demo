@@ -1,4 +1,4 @@
-// 全局路由守卫的命名必须为global.js结尾
+// 全局路由导航的命名必须为global.js结尾
 import {navigateTo} from "#app";
 
 export default defineNuxtRouteMiddleware((to, from) => {

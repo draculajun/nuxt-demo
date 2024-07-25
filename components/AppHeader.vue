@@ -17,9 +17,6 @@
     <li>
       <NuxtLink to="/about">about</NuxtLink>
     </li>
-    <li>
-      <NuxtLink to="/userEdit">userEdit</NuxtLink>
-    </li>
   </ul>
 
 </template>
